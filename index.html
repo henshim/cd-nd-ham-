@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function temputure(c){
+        this.temputure=c;
+        this.getF=function (){
+            return (9/5)*c+32;
+        }
+        this.getK=function (){
+            return c+273.15;
+        }
+        this.toString=function (){
+            let st='';
+            st +='<br>Độ C: '+c;
+            st +='<br>Độ C sang độ F: '+this.getF();
+            st+='<br>Độ C sang độ K: '+this.getK();
+            return st;
+        }
+    }
+
+    let a=new temputure(prompt('Nhập độ c:'));
+
+    document.write(a.toString());
+</script>
+</body>
+</html>
